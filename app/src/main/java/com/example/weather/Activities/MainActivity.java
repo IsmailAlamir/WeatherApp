@@ -4,11 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.example.weather.Adapter.HourlyAdapter;
 import com.example.weather.Domains.Hourly;
 import com.example.weather.R;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -22,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initRecyclerView();
+        setVariable();
+    }
+
+    private void setVariable() {
+        TextView next7DaysBtn=findViewById(R.id.next_btn);
+
+        next7DaysBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, TomorrowActivity.class)));
     }
 
     private void initRecyclerView(){
