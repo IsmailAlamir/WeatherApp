@@ -1,4 +1,4 @@
-package com.example.weather.Activitis;
+package com.example.weather.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
